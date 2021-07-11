@@ -27,31 +27,31 @@ class Board extends React.Component {
         constructor(props) {
                 super(props);
                 this.state = {
-                        sqaures: Array(9).fill(null),
+                        squares: Array(9).fill(null),
                         xIsNext: true,
                 };
         }
         handleClick(i) {
-                const sqaures = this.state.sqaures.slice();
+                const squares = this.state.squares.slice();
                 if (caculateWinner(squares) || squares[i]) {
                         return;
                 }
-                sqaures[i] = this.state.xIsNext ? 'X' : 'O';
+                squares[i] = this.state.xIsNext ? 'X' : 'O';
                 // sqaures[i] = 'X';
                 this.setState({
-                        sqaures: sqaures,
+                        squares: squares,
                         xIsNext: !this.state.xIsNext,
                 });
         }
         renderSquare(i) {
           return <Square 
-                value={this.state.sqaures[i]}
+                value={this.state.squares[i]}
                 onClick={() => this.handleClick(i)}
            />;
         }
       
         render() {
-                const winner = caculateWinner(this.state.sqaures);
+                const winner = caculateWinner(this.state.squares);
                 let status;
                 if (winner) {
                         status = 'Winner: ' + winner;
@@ -112,7 +112,7 @@ function caculateWinner(squares) {
         ];
         for (let i = 0; i < lines.length; i++) {
                 const [a, b, c] = lines[i];
-                if (squares[a] && squares[a] === sqaures[b] && squares[a] === squares[c]){
+                if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]){
                         return squares[a];
                 }
         }

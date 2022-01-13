@@ -10,6 +10,14 @@
       "StackName": "amplify-amplify00be53ce45dd4-staging-62648",
       "StackId": "arn:aws:cloudformation:us-west-2:486023045902:stack/amplify-amplify00be53ce45dd4-staging-62648/f8cfe3a0-e210-11eb-85ee-02e37b586473",
       "AmplifyAppId": "d30hb3rh94bu25"
+    },
+    "categories": {
+      "function": {
+        "laundryfunction": {
+          "deploymentBucketName": "amplify-amplify00be53ce45dd4-staging-62648-deployment",
+          "s3Key": "amplify-builds/laundryfunction-524d74733473534c7a35-build.zip"
+        }
+      }
     }
   }
 }

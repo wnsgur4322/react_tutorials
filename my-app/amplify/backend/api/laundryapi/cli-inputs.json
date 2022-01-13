@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/laundry": {
+      "name": "/laundry",
+      "lambdaFunction": "laundryfunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

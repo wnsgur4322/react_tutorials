@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "reacttutorialsmyapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/tmp/amplify-2ace6f69-58dd-425e-a4b8-ec86ff660c0c/amplify/backend/api/reacttutorialsmyapp/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}

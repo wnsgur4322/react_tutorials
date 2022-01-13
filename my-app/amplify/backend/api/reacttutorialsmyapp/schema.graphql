@@ -1,0 +1,11 @@
+type Washer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  isTurnOn: Boolean
+  user: String
+}
+
+type Dryer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  isTurnOn: Boolean
+  user: String
+}

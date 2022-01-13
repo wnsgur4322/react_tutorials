@@ -1,0 +1,14 @@
+{
+  "resourceName": "laundrydb",
+  "tableName": "laundrydb",
+  "partitionKey": {
+    "fieldName": "machine",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "user",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

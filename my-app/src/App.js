@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import './App.css';
 import Routing from "./Routes";
 import Amplify, { API } from "aws-amplify";
-import config from "./aws-exports";
+import config from "./aws-exports.js";
 import { WasherUserContext, DryerUserContext
       } from "./contextLib";
 

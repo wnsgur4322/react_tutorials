@@ -1,0 +1,64 @@
+.App {
+  width: 100% !important;
+}
+
+.color-nav {
+}
+.nav-link {
+  color: white !important;
+}
+.nav-link:hover {
+  color: black !important;
+}
+.navitem:global(.active) {
+  color: black !important;
+}
+.NavDropdown-item.focus {
+  background-color: #f9a825;
+  color: white;
+  width: 100%;
+}
+
+.NavDropdown-item.active {
+  background-color: #f9a825;
+  color: white;
+  width: 100%;
+}
+
+.header-area {
+  flex: 1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  padding-top: 5px;
+  max-height: 330px;
+  -webkit-transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+}
+
+.header-area.header-sticky {
+  max-height: 80px;
+  padding-top: 0px;
+}
+
+body {
+  flex: 1;
+  margin-top: 0px;
+}
+
+button:focus {
+  outline: none !important;
+  outline-offset: none !important;
+}
+
+@media screen and (min-width: 100px) {
+}
+
+@media screen and (min-width: 760px) {
+}
+
+@media screen and (min-width: 1440px) {
+}

@@ -3,26 +3,26 @@ import {
 	Grid, Button
 } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
-import { useWasherUserContext, useDryerUserContext
-} from "./contextLib";
 import "./Home.css";
 
 //img
 import catVibe from "./img/bomba.gif";
+import pepeDance from "./img/pepe-dance.gif";
+import laundryMeme from "./img/laundry_meme.jpg";
+import kanyeFake from "./img/kanye-fake.gif"
 
 
 export default function Home() {
         const navigate = useNavigate();
-        const {washerUser, setWasherUser} = useWasherUserContext();
-        const {dryerUser, setDryerUser} = useDryerUserContext();
 
         const goToLaundry = (event, user) => {
                 event.preventDefault();
-                setWasherUser(user);
-                setDryerUser(user);
+                localStorage.setItem("user", user);
                 navigate("/laundry-info");
 
         }
+        const memes = [catVibe, pepeDance, laundryMeme, kanyeFake];
+        let randomImage = Math.floor(Math.random()*memes.length);
         
         const btnContents = [
                 "Alex", "Anthony", "Danny", "Derek", "Ian", "Jared", "Kevin"
@@ -32,7 +32,7 @@ export default function Home() {
                 <div className="lander">
                         <h1>Fillmore Laundry</h1>
                         <p className="text-muted">Powered by Derek AKA Kimchi</p>
-                        <img src={catVibe} alt="cat vibe" stlye={{margin: "0 auto", textAlign: "center"}}/>
+                        <img src={memes[randomImage]} alt="randomMemes" stlye={{margin: "0 auto", textAlign: "center"}}/>
                 </div>
                 <Grid
                         key={0} 

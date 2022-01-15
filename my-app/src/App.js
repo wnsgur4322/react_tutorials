@@ -3,18 +3,19 @@ import './App.css';
 import Routing from "./Routes";
 import Amplify, { API } from "aws-amplify";
 import config from "./aws-exports.js";
-import { WasherUserContext, DryerUserContext
-      } from "./contextLib";
 
 Amplify.configure(config);
 
 function App() {
-        const [washerUser, setWasherUser] = useState("");
-        const [dryerUser, setDryerUser] = useState("");
 
         useEffect(() => {
-                API.get("laundryapi", "/laundry/object")
-                .then((laundryRes) => console.log(laundryRes));
+                async function fetchData() {
+                        await API.get("laundryapi", "/laundry/object")
+                        .then((res) => {
+                                console.log(res);
+                        });
+                }
+                fetchData();
 
         }, []);
 
@@ -38,10 +39,11 @@ function App() {
                 // })
                 API.put("laundryapi", "/laundry", {
                         body: {
-                                user: "none",
+                                user: "admin",
                                 id: 0,
                                 machine: "Washer",
-                                isOn: true
+                                isOn: true,
+                                who: "Kimchi"
                         } 
                 })
                 .then(response => {
@@ -57,12 +59,7 @@ function App() {
 
 	return (
     	<div className="App">
-                <WasherUserContext.Provider value={{ washerUser, setWasherUser }}>
-                        <DryerUserContext.Provider value={{ dryerUser, setDryerUser }}>
-      		                <Routing />
-                                      {/* <button onClick={handleSubmit}>submit</button> */}
-                        </DryerUserContext.Provider>
-                </WasherUserContext.Provider>
+                <Routing />
     	</div>
   	);
 }

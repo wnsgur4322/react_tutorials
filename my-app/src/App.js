@@ -22,18 +22,37 @@ function App() {
                 e.preventDefault();
                 // API.post("laundryapi", "/laundry", {
                 //         body: {
+                //                 id: 0,
+                //                 machine: "Washer",
+                //                 isOn: false,
+                //                 user: "none" 
+                //         }
+                // })
+                // API.post("laundryapi", "/laundry", {
+                //         body: {
+                //                 id: 1,
                 //                 machine: "Dryer",
                 //                 isOn: false,
                 //                 user: "none" 
                 //         }
                 // })
-                API.put("laundryapi", "/laundry/machine/:0", {
+                API.put("laundryapi", "/laundry", {
                         body: {
-                                machine: "Dryer",
-                                isOn: true,
-                                user: "Derek"
+                                user: "none",
+                                id: 0,
+                                machine: "Washer",
+                                isOn: true
                         } 
+                })
+                .then(response => {
+                        // Add your code here
+                        console.log(response)
+                      })
+                      .catch(error => {
+                        console.log(error.response);
                 });
+                // API.del("laundryapi", "/laundry/object/Washer/none")
+                // .then((res) => console.log(res));
         }
 
 	return (
@@ -41,7 +60,7 @@ function App() {
                 <WasherUserContext.Provider value={{ washerUser, setWasherUser }}>
                         <DryerUserContext.Provider value={{ dryerUser, setDryerUser }}>
       		                <Routing />
-                                      {/* <button onClick={handleSubmit}>submit</button> */}
+                                      <button onClick={handleSubmit}>submit</button>
                         </DryerUserContext.Provider>
                 </WasherUserContext.Provider>
     	</div>

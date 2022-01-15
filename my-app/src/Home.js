@@ -32,7 +32,9 @@ export default function Home() {
                 <div className="lander">
                         <h1>Fillmore Laundry</h1>
                         <p className="text-muted">Powered by Derek AKA Kimchi</p>
-                        <img src={memes[randomImage]} alt="randomMemes" stlye={{margin: "0 auto", textAlign: "center"}}/>
+                        <div stlye={{margin: "0 auto", textAlign: "center"}}>
+                        <img src={memes[randomImage]} alt="randomMemes" style={{margin: "0 auto", textAlign: "center", width: "300px"}}/>
+                        </div>
                 </div>
                 <Grid
                         key={0} 

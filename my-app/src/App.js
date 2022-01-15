@@ -60,7 +60,7 @@ function App() {
                 <WasherUserContext.Provider value={{ washerUser, setWasherUser }}>
                         <DryerUserContext.Provider value={{ dryerUser, setDryerUser }}>
       		                <Routing />
-                                      <button onClick={handleSubmit}>submit</button>
+                                      {/* <button onClick={handleSubmit}>submit</button> */}
                         </DryerUserContext.Provider>
                 </WasherUserContext.Provider>
     	</div>

@@ -15,7 +15,7 @@
       "function": {
         "laundryfunction": {
           "deploymentBucketName": "amplify-amplify00be53ce45dd4-staging-62648-deployment",
-          "s3Key": "amplify-builds/laundryfunction-524d74733473534c7a35-build.zip"
+          "s3Key": "amplify-builds/laundryfunction-636e7844427366744e56-build.zip"
         }
       }
     }

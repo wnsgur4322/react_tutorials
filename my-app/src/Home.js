@@ -19,6 +19,7 @@ export default function Home() {
                 event.preventDefault();
                 localStorage.setItem("user", user);
                 navigate("/laundry-info");
+                
 
         }
         const memes = [catVibe, pepeDance, laundryMeme, kanyeFake];
